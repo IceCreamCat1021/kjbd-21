@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Bird Game</title>
+    <title>HB KJ! (2)</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
+        }
+        #game-rules {
+            text-align: center;
+            margin-bottom: 20px;
         }
         #game-container {
             text-align: center;
@@ -22,16 +27,22 @@
     </style>
 </head>
 <body>
+    <div id="game-rules">
+        <h2>Game Rules</h2>
+        <p>1. Press space or click to make the bird jump</p>
+        <p>2. Avoid hitting the pipes</p>
+        <p>3. Score 6 points in a single round or accumulate 30 total points to proceed</p>
+    </div>
     <div id="game-container"></div>
 
     <script type="text/babel">
         const BIRD_SPEED = 2;
         const PIPE_SPEED = 2;
         const PIPE_INTERVAL = 200;
-        const GRAVITY = 0.4;
+        const GRAVITY = 0.5;
         const JUMP_STRENGTH = -10;
         const PIPE_WIDTH = 50;
-        const PIPE_GAP = 250;
+        const PIPE_GAP = 250; // Increased gap between pipes
 
         const Bird = ({ y }) => (
             <div style={{
@@ -133,7 +144,7 @@
                             .filter((pipe) => pipe.x > -PIPE_WIDTH);
 
                         if (newPipes.length === 0 || 400 - newPipes[newPipes.length - 1].x >= PIPE_INTERVAL) {
-                            const newPipeHeight = Math.random() * 300 + 100;
+                            const newPipeHeight = Math.random() * 200 + 100; // Adjusted for larger gap
                             newPipes.push({ x: 400, height: newPipeHeight, passed: false });
                         }
 
