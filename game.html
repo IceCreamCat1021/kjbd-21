@@ -29,9 +29,9 @@
 <body>
     <div id="game-rules">
         <h2>Game Rules</h2>
-        <p>1. Press space or click to make the bird jump</p>
-        <p>2. Avoid hitting the green pipes</p>
-        <p>3. Score 6 points in a single round or accumulate 30 total points to proceed next</p>
+        <p>1. Press space or click to make the bird jump.</p>
+        <p>2. Avoid hitting the green pipes.</p>
+        <p>3. Score 10 points in a single round or accumulate 30 total points to unlock the next page.</p>
     </div>
     <div id="game-container"></div>
 
@@ -172,7 +172,7 @@
             }, [gameState, velocity, birdY]);
 
             React.useEffect(() => {
-                if (score >= 6 || accumulatedPoints >= 30) {
+                if (score >= 10 || accumulatedPoints >= 30) {
                     setShowProceedButton(true);
                 }
             }, [score, accumulatedPoints]);
