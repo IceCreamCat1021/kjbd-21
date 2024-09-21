@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>生日快乐hohoho</title>
+    <title>HB KJ :)</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        input {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "1943") {
+                window.location.href = "game.html";
+            } else {
+                alert("Incorrect passcode. Please try again.");
+            }
+        }
+    </script>
 </head>
 <body>
     <h1>嘿嘿，恭喜你成功通关~ (●'◡'●)</h1>
-    <p>收下你的生日长信吧你！（没有virus不要怕）</p>
+    <p>收下你的 1500+字生日长信吧你！（没有virus不要怕）</p>
+    <p>不出意外的话...你应该不用pause or skip来看 hehe</p>
     <p><a href="https://drive.google.com/file/d/" target="_blank">Click me to claim your reward!</a></p>
 </body>
 </html>
