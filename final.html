@@ -6,38 +6,12 @@
     <title>收下你的长信！</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
             text-align: center;
         }
-        input {
-            margin-top: 10px;
-            padding: 10px;
-            font-size: 16px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+        p {
+            white-space: pre-line; /* Preserves line breaks */
         }
     </style>
-    <script>
-        function checkPassword() {
-            var password = document.getElementById("password").value;
-            if (password === "1943") {
-                window.location.href = "game.html";
-            } else {
-                alert("Incorrect passcode. Please try again.");
-            }
-        }
-    </script>
 </head>
 <body>
     <h1>嘿嘿，恭喜你成功通关~ (●'◡'●)</h1>
