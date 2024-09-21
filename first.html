@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HB KJ - Verification</title>
+    <title>HB KJ - 验证</title>
     <style>
         body {
             display: flex;
@@ -31,7 +31,7 @@
     <script>
         function checkPassword() {
             var password = document.getElementById("password").value;
-            if (password === "0922") {
+            if (password === "1943") {
                 window.location.href = "game.html";
             } else {
                 alert("Incorrect passcode. Please try again.");
@@ -41,8 +41,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Enter Passcode</h1>
-        <p>*Hint: Your Four-Digit Birthday Date</p>
+        <h1>Happy Birthday Kangjie~</h1>
+        <h2>Enter Passcode</h2>
+        <p>*Hint: The Sum of Our Four-Digit Birthday Date</p>
         <input type="password" id="password" placeholder="Enter passcode">
         <br>
         <button onclick="checkPassword()">Submit</button>
