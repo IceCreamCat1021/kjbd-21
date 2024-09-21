@@ -14,7 +14,15 @@ const PIPE_SPEED = 2;
 
 const gameContainer = document.getElementById('game-container');
 
+// Check if game container is being selected
+if (gameContainer) {
+    console.log("Game container found!");
+} else {
+    console.error("Game container NOT found!");
+}
+
 function startGame() {
+    console.log("Game started");
     gameState = 'playing';
     birdY = 250;
     velocity = 0;
@@ -74,6 +82,7 @@ function renderGame() {
     gameContainer.appendChild(scoreDisplay);
 }
 
+
 function gameLoop() {
     if (gameState === 'playing') {
         birdY += velocity;
@@ -102,6 +111,7 @@ function gameLoop() {
     }
 }
 
+// Start game when space is pressed
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Space') {
         if (gameState === 'start') {
@@ -112,4 +122,5 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// Set up the game loop
 setInterval(gameLoop, 20);
